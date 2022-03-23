@@ -4,16 +4,116 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="475c8235-c89f-4b11-a355-aac2a4781917" name="Changes" comment="first blood">
-      <change afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/YalLessonOrm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/YalLessonOrm.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+    <list default="true" id="475c8235-c89f-4b11-a355-aac2a4781917" name="Changes" comment="second blood">
+      <change afterPath="$PROJECT_DIR$/forms/user.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/Flask_WTF-1.0.0.dist-info/INSTALLER" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/Flask_WTF-1.0.0.dist-info/LICENSE.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/Flask_WTF-1.0.0.dist-info/METADATA" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/Flask_WTF-1.0.0.dist-info/RECORD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/Flask_WTF-1.0.0.dist-info/REQUESTED" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/Flask_WTF-1.0.0.dist-info/WHEEL" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/Flask_WTF-1.0.0.dist-info/top_level.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/WTForms-3.0.1.dist-info/INSTALLER" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/WTForms-3.0.1.dist-info/LICENSE.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/WTForms-3.0.1.dist-info/METADATA" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/WTForms-3.0.1.dist-info/RECORD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/WTForms-3.0.1.dist-info/WHEEL" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/WTForms-3.0.1.dist-info/top_level.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/flask_wtf/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/flask_wtf/_compat.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/flask_wtf/csrf.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/flask_wtf/file.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/flask_wtf/form.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/flask_wtf/i18n.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/flask_wtf/recaptcha/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/flask_wtf/recaptcha/fields.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/flask_wtf/recaptcha/validators.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/flask_wtf/recaptcha/widgets.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/csrf/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/csrf/core.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/csrf/session.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/fields/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/fields/choices.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/fields/core.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/fields/datetime.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/fields/form.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/fields/list.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/fields/numeric.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/fields/simple.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/form.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/i18n.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/ar/LC_MESSAGES/wtforms.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/ar/LC_MESSAGES/wtforms.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/bg/LC_MESSAGES/wtforms.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/bg/LC_MESSAGES/wtforms.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/ca/LC_MESSAGES/wtforms.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/ca/LC_MESSAGES/wtforms.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/cs_CZ/LC_MESSAGES/wtforms.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/cs_CZ/LC_MESSAGES/wtforms.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/cy/LC_MESSAGES/wtforms.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/cy/LC_MESSAGES/wtforms.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/de/LC_MESSAGES/wtforms.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/de/LC_MESSAGES/wtforms.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/de_CH/LC_MESSAGES/wtforms.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/de_CH/LC_MESSAGES/wtforms.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/el/LC_MESSAGES/wtforms.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/el/LC_MESSAGES/wtforms.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/en/LC_MESSAGES/wtforms.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/en/LC_MESSAGES/wtforms.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/es/LC_MESSAGES/wtforms.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/es/LC_MESSAGES/wtforms.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/et/LC_MESSAGES/wtforms.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/et/LC_MESSAGES/wtforms.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/fa/LC_MESSAGES/wtforms.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/fa/LC_MESSAGES/wtforms.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/fi/LC_MESSAGES/wtforms.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/fi/LC_MESSAGES/wtforms.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/fr/LC_MESSAGES/wtforms.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/fr/LC_MESSAGES/wtforms.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/he/LC_MESSAGES/wtforms.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/he/LC_MESSAGES/wtforms.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/hu/LC_MESSAGES/wtforms.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/hu/LC_MESSAGES/wtforms.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/it/LC_MESSAGES/wtforms.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/it/LC_MESSAGES/wtforms.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/ja/LC_MESSAGES/wtforms.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/ja/LC_MESSAGES/wtforms.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/ko/LC_MESSAGES/wtforms.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/ko/LC_MESSAGES/wtforms.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/nb/LC_MESSAGES/wtforms.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/nb/LC_MESSAGES/wtforms.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/nl/LC_MESSAGES/wtforms.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/nl/LC_MESSAGES/wtforms.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/pl/LC_MESSAGES/wtforms.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/pl/LC_MESSAGES/wtforms.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/pt/LC_MESSAGES/wtforms.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/pt/LC_MESSAGES/wtforms.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/ru/LC_MESSAGES/wtforms.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/ru/LC_MESSAGES/wtforms.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/sk/LC_MESSAGES/wtforms.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/sk/LC_MESSAGES/wtforms.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/sv/LC_MESSAGES/wtforms.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/sv/LC_MESSAGES/wtforms.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/tr/LC_MESSAGES/wtforms.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/tr/LC_MESSAGES/wtforms.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/uk/LC_MESSAGES/wtforms.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/uk/LC_MESSAGES/wtforms.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/wtforms.pot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/zh/LC_MESSAGES/wtforms.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/zh/LC_MESSAGES/wtforms.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/zh_TW/LC_MESSAGES/wtforms.mo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/locale/zh_TW/LC_MESSAGES/wtforms.po" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/meta.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/validators.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/widgets/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/python3.10/site-packages/wtforms/widgets/core.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/49b2382b-fe9e-489f-bd8d-a10d7769f320.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/a0ed1229-9da9-406d-a5dc-737c2119ef23.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a0ed1229-9da9-406d-a5dc-737c2119ef23.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/__all_models.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/__all_models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/blogs.db" beforeDir="false" afterPath="$PROJECT_DIR$/db/blogs.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,8 +124,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -106,7 +206,9 @@
       <workItem from="1647711234393" duration="14225000" />
       <workItem from="1647844485720" duration="642000" />
       <workItem from="1647887247365" duration="1674000" />
-      <workItem from="1647948806565" duration="5174000" />
+      <workItem from="1647948806565" duration="5337000" />
+      <workItem from="1648023497569" duration="1066000" />
+      <workItem from="1648055719065" duration="1151000" />
     </task>
     <task id="LOCAL-00001" summary="first blood">
       <created>1647967557799</created>
@@ -115,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647967557799</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="second blood">
+      <created>1647970008072</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1647970008072</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,7 +243,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first blood" />
-    <option name="LAST_COMMIT_MESSAGE" value="first blood" />
+    <MESSAGE value="second blood" />
+    <option name="LAST_COMMIT_MESSAGE" value="second blood" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -148,6 +258,6 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/YalLessonOrm$main.coverage" NAME="main Coverage Results" MODIFIED="1647969935341" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/YalLessonOrm$main.coverage" NAME="main Coverage Results" MODIFIED="1648056778116" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
