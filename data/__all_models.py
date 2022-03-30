@@ -25,6 +25,7 @@ class User(SqlAlchemyBase, UserMixin):
                                       default=datetime.datetime.now)
     news = orm.relationship("News", back_populates='user')
     jobs = orm.relationship("Jobs", back_populates='user')
+    department = orm.relationship("Department", back_populates='user')
 
     def set_password(self, password):
         self.hashed_password = password
@@ -71,6 +72,7 @@ class Department(SqlAlchemyBase):
     id = sqlalchemy.Column(sqlalchemy.Integer,
                            primary_key=True, autoincrement=True)
     title = sqlalchemy.Column(sqlalchemy.String, nullable=True)
-    chief = sqlalchemy.Column(sqlalchemy.Integer, nullable=True)
+    chief = sqlalchemy.Column(sqlalchemy.Integer, sqlalchemy.ForeignKey('users.id'))
     members = sqlalchemy.Column(sqlalchemy.String)
     email = sqlalchemy.Column(sqlalchemy.String, nullable=True)
+    user = orm.relationship('User', back_populates='department')

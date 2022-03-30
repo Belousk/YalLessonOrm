@@ -1,23 +1,32 @@
-.manage-panel{
+.manage-panel {
     margin: 10px;
     display: flex;
     justify-content: space-between;
 }
 
-.quit-button{
+.quit-button {
     background-color: #0c301c;
     border-radius: 5px;
     padding: 0 5px;
     color: white;
 }
 
-.quit-button:hover{
+.quit-button:hover {
     opacity: 0.94;
     transform: scale(1.2);
     color: white;
     transition-duration: 300ms;
 }
 
-.form-control{
+.form-control {
     width: 300px;
+}
+
+table {
+    border-collapse: collapse;
+    border: 3px solid purple;
+}
+td {
+    padding: 10px;
+    border: 2px solid black;
 }

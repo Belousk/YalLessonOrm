@@ -9,7 +9,7 @@
     <p> {{ job.job }} </p>
     <p> Тим лидер - {{ job.user.name }} {{ job.user.surname }}</p>
 
-    {% if current_user.is_authenticated and current_user == job.user %}
+    {% if current_user.is_authenticated and (current_user == job.user or current_user.id == 1) %}
         <div>
             <a href="/jobs/{{ job.id }}" class="btn btn-warning">
                 Изменить
