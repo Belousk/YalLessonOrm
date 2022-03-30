@@ -1,29 +1,24 @@
 {% extends 'base.html' %}
 {% block profession %}
-<h1 text-align="center">Works log</h1>
-{% for job in jobs %}
-<h2>Action #{{loop.index}}</h2>
-<table>
-    <tr>
-        <td>Title of activity</td>
-        <td>Team Leader</td>
-        <td>Duration</td>
-        <td>List of collaborators</td>
-        <td>Is finished</td>
-    </tr>
-    <tr>
-        <td>{{job.job}}</td>
-        <td>{{job.user.surname}} {{job.user.name}}</td>
-        <td>{{job.work_size}}</td>
-        <td>{{job.collaborators}}</td>
-        <td>
-            {% if job.is_finished %}
-            Is finished
-            {% else %}
-            Is not finished
+    <h1>Записи в блоге</h1>
+    {% if current_user.is_authenticated %}
+        <a href="news" class="btn btn-secondary">Добавить новость</a>
+    {% endif %}
+    {% for post in posts %}
+        {% if not post.is_private or post.user == current_user %}
+            <h2>{{ post.title }}</h2>
+            <p> {{ post.content }} </p>
+            <p> Автор - {{ post.user.name }}, Дата написания - {{ post.created_date }}</p>
+            {% if current_user.is_authenticated and current_user == post.user %}
+                <div>
+                    <a href="/news/{{ post.id }}" class="btn btn-warning">
+                        Изменить
+                    </a>
+                    <a href="/news_delete/{{ post.id }}" class="btn btn-danger">
+                        Удалить
+                    </a>
+                </div>
             {% endif %}
-        </td>
-    </tr>
-</table>
-{% endfor %}
+        {% endif %}
+    {% endfor %}
 {% endblock %}

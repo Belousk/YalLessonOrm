@@ -2,10 +2,11 @@ import datetime
 
 from sqlalchemy import orm
 import sqlalchemy
+from flask_login import UserMixin
 from .db_session import SqlAlchemyBase
 
 
-class User(SqlAlchemyBase):
+class User(SqlAlchemyBase, UserMixin):
     __tablename__ = 'users'
 
     id = sqlalchemy.Column(sqlalchemy.Integer,
@@ -22,7 +23,14 @@ class User(SqlAlchemyBase):
     hashed_password = sqlalchemy.Column(sqlalchemy.String, nullable=True)
     modified_date = sqlalchemy.Column(sqlalchemy.DateTime,
                                       default=datetime.datetime.now)
-    news = orm.relation("News", back_populates='user')
+    news = orm.relationship("News", back_populates='user')
+    jobs = orm.relationship("Jobs", back_populates='user')
+
+    def set_password(self, password):
+        self.hashed_password = password
+
+    def check_password(self, password):
+        return self.hashed_password == password
 
 
 class News(SqlAlchemyBase):
@@ -38,7 +46,7 @@ class News(SqlAlchemyBase):
 
     user_id = sqlalchemy.Column(sqlalchemy.Integer,
                                 sqlalchemy.ForeignKey("users.id"))
-    user = orm.relation('User')
+    user = orm.relationship('User', back_populates='news')
 
 
 class Jobs(SqlAlchemyBase):
@@ -54,11 +62,11 @@ class Jobs(SqlAlchemyBase):
     start_date = sqlalchemy.Column(sqlalchemy.DateTime)
     end_date = sqlalchemy.Column(sqlalchemy.DateTime)
     is_finished = sqlalchemy.Column(sqlalchemy.Boolean)
-    user = orm.relation('User')
+    user = orm.relationship('User', back_populates='jobs')
 
 
 class Department(SqlAlchemyBase):
-    __tablename__ = 'jobs'
+    __tablename__ = 'department'
 
     id = sqlalchemy.Column(sqlalchemy.Integer,
                            primary_key=True, autoincrement=True)
@@ -66,4 +74,3 @@ class Department(SqlAlchemyBase):
     chief = sqlalchemy.Column(sqlalchemy.Integer, nullable=True)
     members = sqlalchemy.Column(sqlalchemy.String)
     email = sqlalchemy.Column(sqlalchemy.String, nullable=True)
-    user = orm.relation('User')
