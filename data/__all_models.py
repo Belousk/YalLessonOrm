@@ -4,9 +4,10 @@ from sqlalchemy import orm
 import sqlalchemy
 from flask_login import UserMixin
 from .db_session import SqlAlchemyBase
+from sqlalchemy_serializer import SerializerMixin
 
 
-class User(SqlAlchemyBase, UserMixin):
+class User(SqlAlchemyBase, UserMixin, SerializerMixin):
     __tablename__ = 'users'
 
     id = sqlalchemy.Column(sqlalchemy.Integer,
@@ -23,6 +24,7 @@ class User(SqlAlchemyBase, UserMixin):
     hashed_password = sqlalchemy.Column(sqlalchemy.String, nullable=True)
     modified_date = sqlalchemy.Column(sqlalchemy.DateTime,
                                       default=datetime.datetime.now)
+    city_from = sqlalchemy.Column(sqlalchemy.String)
     news = orm.relationship("News", back_populates='user')
     jobs = orm.relationship("Jobs", back_populates='user')
     department = orm.relationship("Department", back_populates='user')
@@ -34,7 +36,7 @@ class User(SqlAlchemyBase, UserMixin):
         return self.hashed_password == password
 
 
-class News(SqlAlchemyBase):
+class News(SqlAlchemyBase, SerializerMixin):
     __tablename__ = 'news'
 
     id = sqlalchemy.Column(sqlalchemy.Integer,
@@ -50,7 +52,7 @@ class News(SqlAlchemyBase):
     user = orm.relationship('User', back_populates='news')
 
 
-class Jobs(SqlAlchemyBase):
+class Jobs(SqlAlchemyBase, SerializerMixin):
     __tablename__ = 'jobs'
 
     id = sqlalchemy.Column(sqlalchemy.Integer,
@@ -66,7 +68,7 @@ class Jobs(SqlAlchemyBase):
     user = orm.relationship('User', back_populates='jobs')
 
 
-class Department(SqlAlchemyBase):
+class Department(SqlAlchemyBase, SerializerMixin):
     __tablename__ = 'department'
 
     id = sqlalchemy.Column(sqlalchemy.Integer,

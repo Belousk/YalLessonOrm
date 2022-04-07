@@ -1501,12 +1501,16 @@
       <DataType>DATETIME|0s</DataType>
       <Position>10</Position>
     </column>
-    <index id="535" parent="495" name="ix_users_email">
+    <column id="535" parent="495" name="city_from">
+      <DataType>VARCHAR|0s</DataType>
+      <Position>11</Position>
+    </column>
+    <index id="536" parent="495" name="ix_users_email">
       <ColNames>email</ColNames>
       <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
-    <key id="536" parent="495">
+    <key id="537" parent="495">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>

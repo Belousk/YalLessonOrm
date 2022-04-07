@@ -1,6 +1,8 @@
 import datetime as dt
 from werkzeug.security import generate_password_hash, check_password_hash
-from flask import Flask, render_template, redirect, make_response, request, abort
+from flask import Flask, render_template, redirect, make_response, request, abort, jsonify
+
+from data import news_api, jobs_api, users_api, news_resources, users_resources, jobs_resources
 from data.__all_models import Jobs, User, News, Department
 from data.db_session import global_init, create_session
 from forms.department import DepartmentForm
@@ -9,8 +11,12 @@ from forms.login import LoginForm
 from forms.news import NewsForm
 from forms.user import RegisterForm
 from flask_login import LoginManager, login_user, logout_user, login_required, current_user
+from work_api import get_address_coords, MAP_API_SERVER
+from flask_restful import Api
 
 app = Flask(__name__)
+api = Api(app)
+
 app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
 app.debug = True
 login_manager = LoginManager()
@@ -22,11 +28,6 @@ def index():
     db_sess = create_session()
     posts = db_sess.query(News).all()
     return render_template('index.html', posts=posts, current_user=current_user)
-
-
-def main():
-    global_init('db/blogs.db')
-    app.run()
 
 
 @app.route("/cookie_test")
@@ -303,8 +304,8 @@ def news_delete(id):
 def departments_delete(department_id):
     db_sess = create_session()
     department = db_sess.query(Department).filter(Department.id == department_id,
-                                            Department.user == current_user
-                                            ).first()
+                                                  Department.user == current_user
+                                                  ).first()
     if department:
         db_sess.delete(department)
         db_sess.commit()
@@ -329,6 +330,34 @@ def jobs_delete(id):
 
 
 # END DELETING
+
+@app.errorhandler(404)
+def not_found(error):
+    return make_response(jsonify({'error': 'Not found'}), 404)
+
+
+@app.route('/users_show/<int:user_id>', methods=['GET'])
+def get_city_photo(user_id):
+    db_sess = create_session()
+    user = db_sess.query(User).get(user_id)
+    coords = get_address_coords(user.city_from)
+    path = f'{MAP_API_SERVER}?ll={",".join(coords)}&l=sat&z=11'
+    return render_template('nostalgy.html', user=user, img_path=path)
+
+
+def main():
+    global_init('db/blogs.db')
+    app.register_blueprint(news_api.blueprint)
+    app.register_blueprint(jobs_api.blueprint)
+    app.register_blueprint(users_api.blueprint)
+    api.add_resource(news_resources.NewsListResource, '/api/v2/news')
+    api.add_resource(news_resources.NewsResource, '/api/v2/news/<int:news_id>')
+    api.add_resource(users_resources.UsersListResource, '/api/v2/users')
+    api.add_resource(users_resources.UsersResource, '/api/v2/users/<int:user_id>')
+    api.add_resource(jobs_resources.JobsListResource, '/api/v2/jobs')
+    api.add_resource(jobs_resources.JobsResource, '/api/v2/jobs/<int:job_id>')
+    app.run()
+
 
 if __name__ == '__main__':
     main()
